@@ -24,7 +24,6 @@ const MealItem = (props) => {
       </div>
       <div>
         <MealItemForm onAddToCart={addToCartHandler} />
-        {/* id={props.id} */}
       </div>
     </li>
   );
