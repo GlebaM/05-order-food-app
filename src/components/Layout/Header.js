@@ -1,4 +1,4 @@
-import React, { Fragment, useContext } from "react";
+import React, { Fragment } from "react";
 
 import HeaderImage from "./HeaderImage";
 import HeaderCartButton from "./HeaderCartButton";
