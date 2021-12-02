@@ -6,9 +6,7 @@ import CartIcon from "../Cart/CartIcon";
 
 const HeaderCartButton = (props) => {
   const [buttonIsHighlighted, setButtonIsHighlighted] = useState(false);
-  const cartCtx = useContext(CartContext);
-
-  const { items } = cartCtx;
+  const { items } = useContext(CartContext);
 
   const numOfCartItems = items.reduce((currNum, item) => {
     return currNum + item.amount;
@@ -17,6 +15,10 @@ const HeaderCartButton = (props) => {
   const btnClasses = `${classes.button} ${
     buttonIsHighlighted ? classes.bump : ""
   }`;
+
+  const windowWidth = window.innerWidth;
+  const windowOWidth = window.outerWidth;
+  console.log(windowWidth, windowOWidth);
 
   useEffect(() => {
     if (items.length === 0) {
@@ -36,7 +38,7 @@ const HeaderCartButton = (props) => {
       <span className={classes.icon}>
         <CartIcon />
       </span>
-      <span>Your cart</span>
+      {window.innerWidth >= 670 && <span>Your cart</span>}
       <span className={classes.badge}>{numOfCartItems}</span>
     </button>
   );

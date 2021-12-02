@@ -3,7 +3,6 @@ import Input from "../../UI/Input";
 import classes from "./MealItemForm.module.css";
 
 const MealItemForm = (props) => {
-  //   const inputId = (Math.random() * 10 ** 9).toFixed();
   const [amoutIsValid, setAmountIsValid] = useState(true);
   const amountInput = useRef();
 
@@ -31,8 +30,7 @@ const MealItemForm = (props) => {
         input={{
           type: "number",
           id: `amount${props.id}`,
-          min: "1",
-          max: "5",
+
           step: "1",
           defaultValue: "1",
         }}

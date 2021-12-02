@@ -18,3 +18,10 @@
   background-color: #641e03;
   border-color: #641e03;
 }
+
+@media screen and (max-width: 480px) {
+  .form button {
+    width: 100%;
+    margin-top: 0.6rem;
+  }
+}

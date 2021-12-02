@@ -1,7 +1,6 @@
 .meal {
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
   margin: 1rem;
   padding-bottom: 1rem;
 }
@@ -25,4 +24,13 @@
   font-weight: bold;
   color: #ad5502;
   font-size: 1.25rem;
+}
+
+@media screen and (max-width: 480px) {
+  .meal {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    text-align: left;
+  }
 }
